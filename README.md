@@ -113,32 +113,41 @@ This template provides a complete data science project structure that you can us
    ```
 
 2. **Create a virtual environment**:
-  ```bash
-  # Create a virtual environment named 'venv'
-  python -m venv venv
 
-  # Activate the virtual environment
-  # On macOS/Linux:
-  source venv/bin/activate
-  # On Windows:
-  venv\Scripts\activate
-  ```
+    Create a virtual environment named 'venv':
+    ```bash
+    python -m venv venv
+    ```
+    Activate the virtual environment:
+    ```bash
+    # On macOS/Linux:
+    source venv/bin/activate
+    ```
+    ```bash
+    # On Windows:
+    venv\Scripts\activate
+    ```
 
-  > **Note**: Ensure that the virtual environment is activated before installing dependencies or running scripts.
+    > **Note**: Ensure that the virtual environment is activated before installing dependencies or running scripts.
 
-3. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+3. **Upgrade pip** (optional but recommended):
+    ```bash
+    python -m pip install --upgrade pip
+    ```
 
-4. **Enable GitHub Copilot Agent mode** in VS Code:
-   - Ensure you have an active Copilot subscription
-   - Open the Chat View:
-     - Using the keyboard shortcut, `Cmd+Shift+I` (Mac) or `Ctrl+Alt+I` (PC), opens it in Agent mode directly.
-     - Alternatively, you can find a Copilot Chat icon in the title bar or use the Command Palette and search for "GitHub Copilot Chat: Open Chat View".
-   - Select agent mode:
-     - In the Chat view, locate the chat mode selector dropdown.
-     - Select "Agent" from the available options (you might also see "Ask" and "Edit").
+4. **Install dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+5. **Enable GitHub Copilot Agent mode** in VS Code:
+    - Ensure you have an active Copilot subscription
+    - Open the Chat View:
+      - Using the keyboard shortcut, `Cmd+Shift+I` (Mac) or `Ctrl+Alt+I` (PC), opens it in Agent mode directly.
+      - Alternatively, you can find a Copilot Chat icon in the title bar or use the Command Palette and search for "GitHub Copilot Chat: Open Chat View".
+    - Select agent mode:
+      - In the Chat view, locate the chat mode selector dropdown.
+      - Select "Agent" from the available options (you might also see "Ask" and "Edit").
 
 
 ## Agent Mode Workflow
