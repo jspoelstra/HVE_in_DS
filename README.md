@@ -112,20 +112,58 @@ This template provides a complete data science project structure that you can us
    cd HVE_in_DS
    ```
 
-2. **Install dependencies**:
-   ```bash
-   pip install -r requirements.txt
-   ```
+2. **Create a virtual environment**:
 
-3. **Enable GitHub Copilot Agent mode** in VS Code:
-   - Ensure you have an active Copilot subscription
-   - Open the Chat View:
-     - Using the keyboard shortcut, `Cmd+Shift+I` (Mac) or `Ctrl+Alt+I` (PC), opens it in Agent mode directly.
-     - Alternatively, you can find a Copilot Chat icon in the title bar or use the Command Palette and search for "GitHub Copilot Chat: Open Chat View".
-   - Select agent mode:
-     - In the Chat view, locate the chat mode selector dropdown.
-     - Select "Agent" from the available options (you might also see "Ask" and "Edit").
+    Create a virtual environment named 'venv':
+    ```bash
+    python -m venv venv
+    ```
+    Activate the virtual environment:
+    ```bash
+    # On macOS/Linux:
+    source venv/bin/activate
+    ```
+    ```bash
+    # On Windows:
+    venv\Scripts\activate
+    ```
 
+    > **Note**: Ensure that the virtual environment is activated before installing dependencies or running scripts.
+
+3. **Upgrade pip** (optional but recommended):
+    ```bash
+    python -m pip install --upgrade pip
+    ```
+
+4. **Install dependencies**:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+5. **Enable GitHub Copilot Agent mode** in VS Code:
+    - Ensure you have an active Copilot subscription
+    - Open the Chat View:
+      - Using the keyboard shortcut, `Cmd+Shift+I` (Mac) or `Ctrl+Alt+I` (PC), opens it in Agent mode directly.
+      - Alternatively, you can find a Copilot Chat icon in the title bar or use the Command Palette and search for "GitHub Copilot Chat: Open Chat View".
+    - Select agent mode:
+      - In the Chat view, locate the chat mode selector dropdown.
+      - Select "Agent" from the available options (you might also see "Ask" and "Edit").
+
+6. **Running the Example End-to-End**
+    1. Use the Python script to create a new project. Open the new folder in VS Code.
+        ```bash
+        python setup_new_project <new folder outside this repo>
+        ```
+    2. In the newly created folder, follow steps 2-4 above to create a virtual environment.
+    3. Set the VS Code Python interpreter to use the newly created `venv`.
+    4. Run the `download_data.py` script to download the data.
+        ```bash
+        python download_data.py
+        ```
+    5. Follow step 5 above to open the agent window.
+    6. Create a plan by typing `/plan_execution` in the agent prompt window. When done, click `keep`.
+    7. Execute step 1 by typing `/plan_execution Step 1: Data Exploration`. Select `Continue` as needed and again `keep` when done. Enjoy reviewing the progress step-by-step!
+    8. Repeat step 7 for each of the 5 steps in the CRISP-DM process as listed below. 
 
 ## Agent Mode Workflow
 
